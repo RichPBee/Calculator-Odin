@@ -1,3 +1,24 @@
+const add = (a, b) => {
+    return a + b;
+}
+
+const subtract = (a,b) => {
+    return a - b;
+}
+
+const multiply = (a,b) => {
+    return a * b;
+}
+
+const divide = (a,b) => {
+    if (b == 0) {
+        return "Bad Maths"
+    } else {
+        return a / b;
+    }
+}
+
+/*
 const add = (...args) => {
     let total;
     for (arg of args) {
@@ -31,4 +52,12 @@ const add = (...args) => {
         total /= args[i];
       }
     return total;
-  }
+  } */
+
+const operate = (a, operator, b) => {
+    return (operator == "add") ? add(a,b)
+        : (operator == "subtract") ? subtract(a,b)
+        : (operator == "multiply") ? multiply(a,b)
+        : (operator == "divide") ? divide(a,b)
+        : undefined
+};
