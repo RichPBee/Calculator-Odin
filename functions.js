@@ -61,3 +61,21 @@ const operate = (a, operator, b) => {
         : (operator == "divide") ? divide(a,b)
         : undefined
 };
+
+
+//Quick function to create 12 buttons (0-9 + 2 spare for later additions) for numberpad, others will be hardcoded
+const numberButtons = () => {
+    for (let i = 0; i < 12; i ++) {
+        const numButton = document.createElement("button");
+        const leftNumPad = document.querySelector(".npb-left");
+        numButton.setAttribute("class", "number-button");
+        if (i >= 2 && i <= 11) {
+            numButton.textContent = `${i - 2}`;
+            numButton.setAttribute("id", `${i - 2}`);
+        } else {
+            numButton.textContent = "";
+        }
+        leftNumPad.insertBefore(numButton, leftNumPad.firstChild);
+    }
+}
+numberButtons();
