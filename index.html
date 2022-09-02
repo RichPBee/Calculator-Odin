@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/11f4a106ba.js" crossorigin="anonymous"></script>
     <script rel="javascript" src="functions.js" defer ></script>
 
     <title>Calculator</title>
@@ -16,17 +17,25 @@
         </div>
         <div class="numberpad">
             <div class="numpad-top">
-                <button class="top-button clear">CLEAR</button>
-                <button class="top-button backspace">BCK</button>
+                <button class="top-button clear"><h1>CLEAR</h1></button>
+                <button class="top-button backspace"><i class="fas fa-backspace"></i></button>
             </div>
             <div class="numpad-bottom">
                 <div class="npb-left">
                 </div>
                 <div class="npb-right">
-                    <button class="operator-button">+</button>
-                    <button class="operator-button">-</button>
-                    <button class="operator-button">X</button>
-                    <button class="operator-button">/</button>
+                    <button class="operator-button" id="add">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button class="operator-button" id="minus">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <button class="operator-button" id="multiply">
+                        <i class="fa fa-times"></i>
+                    </button>
+                    <button class="operator-button" id="divide">
+                        <i class="fa fa-divide"></i>
+                    </button>
                 </div>
             </div>
         </div>
