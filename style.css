@@ -26,11 +26,19 @@ body {
 }
 
 .app-display {
-    flex: 1 1 auto;
-    height: 200px;
+    flex: 0 1 auto;
+    min-height: 200px;
     background-color: black;
     width: 100%;
     border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
 }
 
 .numberpad {
@@ -61,9 +69,10 @@ body {
     flex: 2 1 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: flex-end;
     padding-right: 40px;
     gap: 10px;
+    flex-direction: row-reverse;
 }
 
 .npb-right {
@@ -87,12 +96,17 @@ body {
 
 .operator-button {
     width: 160px;
-    height: 80px;
+    height: 60px;
     font-size: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    background-color: yellow;
+}
+
+#equals {
+    background-color: red;
 }
 
 .top-button {
@@ -102,6 +116,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    background-color: #a3a3a3;
 }
 
 .fas.fa-backspace {
